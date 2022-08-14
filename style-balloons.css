@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 97vh;
+    overflow: hidden;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 100%;
+    /* grid-template-rows: 33% 33% 33%; */
+    width: 25rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    width: 10rem;
+}
+
+h4 {
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.balloons-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/******************* SVG animation ************************/
+
+.puff-up .balloon-main {
+    transform: scale(2) translateY(-6.2rem);
+    transform-origin: 5.5rem 0;
+}
+
+@keyframes moveBalloon1 {
+    25% {
+        transform: translateX(-2rem) translateY(-6rem);
+    }
+    75% {
+        transform: translateX(-5rem) translateY(-16rem);
+    }
+    25% {
+        transform: translateX(-7rem) translateY(-10rem);
+    }
+    75% {
+        transform: translateX(-9rem) translateY(7rem);
+    }
+}
+
+@keyframes moveBalloon2 {
+    25% {
+        transform: translateX(-6rem) translateY(10rem);
+    }
+    75% {
+        transform: translateX(-10rem) translateY(-1rem);
+    }
+    25% {
+        transform: translateX(-15rem) translateY(-8rem);
+    }
+    75% {
+        transform: translateX(0) translateY(-14rem);
+    }
+}
+
+@keyframes moveBalloon3 {
+    25% {
+        transform: translateX(4rem) translateY(-6rem);
+    }
+    75% {
+        transform: translateX(7rem) translateY(-16rem);
+    }
+    25% {
+        transform: translateX(-15rem) translateY(-5rem);
+    }
+    75% {
+        transform: translateX(-5rem) translateY(10rem);
+    }
+}
+
+@keyframes moveBalloon4 {
+    25% {
+        transform: translateX(6rem) translateY(-12rem);
+    }
+    75% {
+        transform: translateX(7rem) translateY(-6rem);
+    }
+    25% {
+        transform: translateX(-1rem) translateY(5rem);
+    }
+    75% {
+        transform: translateX(10rem) translateY(10rem);
+    }
+}
+
+@keyframes moveBalloon5 {
+    25% {
+        transform: translateX(-4rem) translateY(10rem);
+    }
+    75% {
+        transform: translateX(-7rem) translateY(-6rem);
+    }
+    25% {
+        transform: translateX(-15rem) translateY(-14rem);
+    }
+    75% {
+        transform: translateX(1rem) translateY(-7rem);
+    }
+}
+
+.let-go .balloon1 {
+    animation: moveBalloon1 10s linear infinite;
+}
+
+.let-go .balloon2 {
+    animation: moveBalloon2 12s linear infinite;
+}
+
+.let-go .balloon3 {
+    animation: moveBalloon3 13s linear infinite;
+}
+
+.let-go .balloon4 {
+    animation: moveBalloon4 8s linear infinite;
+}
+
+.let-go .balloon5 {
+    animation: moveBalloon5 10s linear infinite;
+}
